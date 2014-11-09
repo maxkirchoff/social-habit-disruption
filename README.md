@@ -4,6 +4,7 @@ Social media and content websites actively hook us into habits of mindless consu
 
 
 **PRIVACY INFO**
+
 I value you privacy and this app does not track, modify or use your personal data or usage information in any way. It simply injects a pop-up on social media and content sites and tracks a timer.
 
 
