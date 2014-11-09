@@ -1,0 +1,26 @@
+{
+  "l10nStatement1": {
+    "message": "There are better things to do",
+    "description": "First message of set that the user sees when trying to use social media."
+  },
+  "l10nStatement2": {
+    "message": "Time to get back to work",
+    "description": "Second message of set that the user sees when trying to use social media."
+  },
+  "l10nStatement3": {
+    "message": "Kick the habit",
+    "description": "Third message of set that the user sees when trying to use social media."
+  },
+  "l10nPreMinuteSelect": {
+    "message": "Go away, I'll start working again in",
+    "description": "The first part of the sentence to lead into minute delay selection"
+  },
+  "l10nMinutes": {
+    "message": "minutes",
+    "description": "word for minutes"
+  },
+  "l10nMinuteDelaySubmit": {
+    "message": "I promise",
+    "description": "text for the submit of the minute delay form"
+  }
+}
