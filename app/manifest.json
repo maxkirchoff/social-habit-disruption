@@ -1,6 +1,6 @@
 {
   "name": "Social Habit Disruption",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 2,
   "description": "Stay focused while working online by reminding yourself to avoid addictive content feeds. Dismiss the pop-up for small breaks.",
   "permissions": [
