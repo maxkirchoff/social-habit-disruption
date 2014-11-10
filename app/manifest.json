@@ -16,8 +16,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://www.facebook.com/*",
-        "*://facebook.com/*",
+        "*://*.facebook.com/*",
         "*://*.twitter.com/*",
         "*://*.reddit.com/*",
         "*://*.tumblr.com/*",
@@ -31,8 +30,7 @@
     },
     {
       "matches": [
-        "*://www.facebook.com/*",
-        "*://facebook.com/*",
+        "*://*.facebook.com/*",
         "*://*.twitter.com/*",
         "*://*.reddit.com/*",
         "*://*.tumblr.com/*",

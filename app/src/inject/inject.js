@@ -1,5 +1,9 @@
 chrome.extension.sendMessage({}, function(response) {
 	var Disruptor = {
+		_siteExceptions: {
+			'facebook.com': ['developers.facebook.com'],
+			'google.com': ['plus.google.com/hangouts']
+		},
 		_popUpVisible: false,
 		_getMessage: chrome.i18n.getMessage,
 		_onlyDuringBusinessHours: false,
@@ -76,6 +80,16 @@ chrome.extension.sendMessage({}, function(response) {
 			$('body').removeClass('blur-body');
 			this._popUpVisible = false;
 		},
+		_isSiteException: function(site) {
+			var currFullPath = window.location.href;
+			if (this._siteExceptions[site][0] !== undefined) {
+				for (var i=0; i < this._siteExceptions[site].length; i++) {
+					if (currFullPath.indexOf(this._siteExceptions[site][i]) > -1) {
+						return true;
+					}
+				}
+			}
+		},
 		init: function() {
 			var that = this;
 			chrome.storage.sync.get('whitelistedSites', function(obj) {
@@ -84,7 +98,9 @@ chrome.extension.sendMessage({}, function(response) {
 				}
 				var currSite = window.location.hostname.split('.').slice(-2).join('.');
 				if ($.inArray(currSite, obj.whitelistedSites) === -1) {
-					that._delayChecker();
+					if (!that._isSiteException(currSite)) {
+						that._delayChecker();
+					}
 				}
 			});
 		}

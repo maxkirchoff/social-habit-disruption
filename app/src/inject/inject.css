@@ -33,7 +33,6 @@ body > * {
 	text-align: center;
 	font-family: "Helvetica","Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
 	border-radius: 10px;
-	overflow: scroll;
 	-webkit-filter: blur(0);
 }
 
