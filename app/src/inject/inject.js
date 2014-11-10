@@ -82,7 +82,7 @@ chrome.extension.sendMessage({}, function(response) {
 		},
 		_isSiteException: function(site) {
 			var currFullPath = window.location.href;
-			if (this._siteExceptions[site][0] !== undefined) {
+			if (site in this._siteExceptions && this._siteExceptions[site][0] !== undefined) {
 				for (var i=0; i < this._siteExceptions[site].length; i++) {
 					if (currFullPath.indexOf(this._siteExceptions[site][i]) > -1) {
 						return true;
