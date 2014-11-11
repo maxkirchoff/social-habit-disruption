@@ -1,6 +1,7 @@
 .options {
     width: 600px;
     margin: 0 auto;
+    padding-bottom: 60px;
 }
 .extension-info {
 
@@ -89,14 +90,63 @@ form {
 }
 form h2 {
     display: block;
-    font-weight: bold;
+    font-weight: 200;
     font-size: 1.3em;
-    margin-bottom: 20px;
     text-transform: uppercase;
+    margin: 10px 0 15px;
 }
-form input {
-    margin-left: 20px;
+form label {
+    display: block;
+    width:80%;
+    margin: 5px 0;
+    font-weight: 800;
+    padding: 5px 10px;
+}
+form label:hover {
+    background-color: #D3D3D3;
+    color: #000;
 }
 form label, form input {
     cursor: pointer;
+}
+form label small {
+    display: block;
+    margin-left: 35px;
+    font-weight: 400;
+}
+form > div {
+    width: 240px;
+    float: left;
+    margin-left: 40px;
+}
+form > div:first-of-type {
+    border-right: 1px solid #666;
+    width: 239px;
+}
+form div.times  {
+    -webkit-columns: 40px 4;
+    background-color: #999;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    padding: 5px;
+}
+form div.times label {
+    font-weight: 200;
+    font-size: 10px;
+    padding: 5px 0;
+    margin: 0;
+    width: 100%;
+}
+form div label a.show-times {
+    float: right;
+    text-decoration: none;
+    color: #666;
+    font-size: 10px;
+    margin-right: 25px;
+    padding: 4px;
+}
+.clear {
+    float: none !important;
+    clear:both;
 }

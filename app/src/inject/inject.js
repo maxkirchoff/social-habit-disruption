@@ -90,17 +90,18 @@ chrome.extension.sendMessage({}, function(response) {
 				}
 			}
 		},
+		_isEnabledSite: function(whitelistSites) {
+			var currSite = window.location.hostname.split('.').slice(-2).join('.');
+			return ($.inArray(currSite, whitelistSites) === -1 && !this._isSiteException(currSite))
+		},
 		init: function() {
 			var that = this;
 			chrome.storage.sync.get('whitelistedSites', function(obj) {
 				if (obj.whitelistedSites === undefined) {
 					obj.whitelistedSites = [];
 				}
-				var currSite = window.location.hostname.split('.').slice(-2).join('.');
-				if ($.inArray(currSite, obj.whitelistedSites) === -1) {
-					if (!that._isSiteException(currSite)) {
-						that._delayChecker();
-					}
+				if (that._isEnabledSite(obj.whitelistedSites)) {
+					that._delayChecker();
 				}
 			});
 		}

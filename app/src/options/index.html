@@ -13,14 +13,41 @@
                 <p>extension options</p>
             </div>
             <form>
-                <h2>Select Sites to block</h2>
-                <label><input type="checkbox" name="whitelisted-site" value="facebook.com" /> Facebook</label><br>
-                <label><input type="checkbox" name="whitelisted-site" value="twitter.com" /> Twitter</label><br>
-                <label><input type="checkbox" name="whitelisted-site" value="google.com" /> Google+</label><br>
-                <label><input type="checkbox" name="whitelisted-site" value="instagram.com" /> Instagram</label><br>
-                <label><input type="checkbox" name="whitelisted-site" value="tumblr.com" /> Tumblr</label><br>
-                <label><input type="checkbox" name="whitelisted-site" value="reddit.com" /> Reddit</label><br>
-                <label><input type="checkbox" name="whitelisted-site" value="youtube.com" /> YouTube</label><br>
+                <div id="sites">
+                    <h2>Select Sites to block</h2>
+                    <label><input type="checkbox" name="whitelisted-site" value="facebook.com" /> Facebook</label>
+                    <label><input type="checkbox" name="whitelisted-site" value="twitter.com" /> Twitter</label>
+                    <label><input type="checkbox" name="whitelisted-site" value="google.com" /> Google+</label>
+                    <label><input type="checkbox" name="whitelisted-site" value="instagram.com" /> Instagram</label>
+                    <label><input type="checkbox" name="whitelisted-site" value="tumblr.com" /> Tumblr</label>
+                    <label><input type="checkbox" name="whitelisted-site" value="reddit.com" /> Reddit</label>
+                    <label><input type="checkbox" name="whitelisted-site" value="youtube.com" /> YouTube</label>
+                </div>
+                <div id="days-times">
+                    <h2>Select days</h2>
+                    <label><input type="checkbox" name="day" value="1" /> Monday <a href="javascript;" class="show-times" data-day="1">show times</a></label>
+                    <div class="times" data-day="1">
+                    </div>
+                    <label><input type="checkbox" name="day" value="2" /> Tuesday <a href="javascript;" class="show-times" data-day="2">show times</a></label>
+                    <div class="times" data-day="2">
+                    </div>
+                    <label><input type="checkbox" name="day" value="3" /> Wednesday <a href="javascript;" class="show-times" data-day="3">show times</a></label>
+                    <div class="times" data-day="3">
+                    </div>
+                    <label><input type="checkbox" name="day" value="4" /> Thursday <a href="javascript;" class="show-times" data-day="4">show times</a></label>
+                    <div class="times" data-day="4">
+                    </div>
+                    <label><input type="checkbox" name="day" value="5" /> Friday <a href="javascript;" class="show-times" data-day="5">show times</a></label>
+                    <div class="times" data-day="5">
+                    </div>
+                    <label><input type="checkbox" name="day" value="6" /> Saturday <a href="javascript;" class="show-times" data-day="6">show times</a></label>
+                    <div class="times" data-day="6">
+                    </div>
+                    <label><input type="checkbox" name="day" value="0" /> Sunday <a href="javascript;" class="show-times" data-day="0">show times</a></label>
+                    <div class="times" data-day="0">
+                    </div>
+                </div>
+                <div class="clear"></div>
             </form>
             <div id="saved">Saved!</div>
         </div>
